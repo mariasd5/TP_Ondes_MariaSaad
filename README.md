@@ -22,7 +22,7 @@ TP_Ondes_Maria_Saad/
 
 1. Problème stationnaire : éléments finis P1, assemblage M et K, Dirichlet homogène, validation par solution analytique.
 2. Schéma explicite : condition CFL, condensation de masse, suivi des énergies.
-3. Schéma implicite (optionnel) : résolution via factorisation de Cholesky.
+3. Schéma implicite : résolution via factorisation de Cholesky.
 
 ## Utilisation
 
