@@ -36,8 +36,7 @@ shading interp
 % shading flat
 colorbar;
 
-% ajouter eventuellement un titre
-title(titre);
+title("visualisation du vecteur UU sur le maillage");
   
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
