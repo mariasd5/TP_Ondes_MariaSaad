@@ -9,7 +9,7 @@ function afficheSigma(Numtri, Reftri, Coorneu)
 %          
 % INPUT * Numtri : liste de triangles 
 %                   (3 numeros de sommets - matrice entiere Nbtri x 3)
-%       * Reftri : liste des références des triangles.
+%       * Reftri : liste des rÃ©fÃ©rences des triangles.
 %       * Coorneu : coordonnees (x, y) des sommets (matrice reelle Nbpt x 2)
 %
 % OUTPUT une fenetre graphique
@@ -25,7 +25,7 @@ ratio = dx / dy;
 figure; 
 
 
-% Fonction sigma et coordonnées des noeuds en discontinu.
+% Fonction sigma et coordonnÃ©es des noeuds en discontinu.
 [Nbtri, Nloc] = size(Numtri);
 Sigma = zeros(Nbtri * Nloc, 1);
 CoorneuDisc = zeros(Nbtri * Nloc, 2);
@@ -33,7 +33,7 @@ NumtriDisc = zeros(Nbtri, 3);
 for i=1:Nbtri
     
     if Reftri(i) ~= 1 && Reftri(i) ~= 2
-        error('Un des triangles a une réference differente de 1 et 2.');
+        error('Un des triangles a une rÃ©ference differente de 1 et 2.');
     end
     
     for j=1:Nloc
@@ -61,7 +61,6 @@ shading interp
 % shading flat
 colorbar;
 
-% ajouter eventuellement un titre
 title("Sigma");
   
   
