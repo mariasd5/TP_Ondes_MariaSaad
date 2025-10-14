@@ -27,8 +27,8 @@ trimesh(Numtri,Coorneu(:,1),Coorneu(:,2),zeros(Nbpt,1));
 view(2);
 axis('equal');
 
-% ajouter eventuellement un titre
-title(titre);
+
+title("maillage");
 
 hold off;
   
