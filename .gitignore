@@ -1,0 +1,20 @@
+# MATLAB temporary and backup files
+*.asv
+*.m~
+*.mex*
+*.log
+*.tmp
+*.bak
+__MACOSX/
+.DS_Store
+Thumbs.db
+
+# Results and data (optional large outputs)
+results/*
+!results/.gitkeep
+data/*
+!data/.gitkeep
+
+# Python cache (if ever used)
+__pycache__/
+*.pyc
