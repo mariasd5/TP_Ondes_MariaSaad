@@ -33,17 +33,23 @@ Potential = zeros(niter, 1);
 Times = zeros(niter, 1);
 
 % Conditions initiales.
-Us(:, 1) = % A COMPLETER
-Us(:, 2) = % A COMPLETER
+Us(:, 1) = interpU0;
+Us(:, 2) = interpU0 + dt * interpU1 - (dt^2 / 2) * (M \ (K * interpU0));
+
 
 % Iteriations.
 for i = 1:niter
     
-    % Calcul des ?nergies.
-    % A COMPLETER
-    
-    % Calcul de la solution ? l'it?ration suivante par descente remont?e.
-    % A COMPLETER
+    % Calcul des énergies
+    vitesse = (Us(:, i) - Us(:, i-1)) / dt;
+    deplacement = (Us(:, i) + Us(:, i-1)) / 2;
+    Kinetic(i) = 0.5 * (vitesse' * (M * vitesse));
+    Potential(i) = 0.5 * (deplacement' * (K * deplacement));
+
+    % Calcul de la solution suivante (schéma implicite)
+    rhs = (2 * M - (dt^2 / 2) * K) * Us(:, i) - (M - (dt^2 / 4) * K) * Us(:, i-1);
+    Us(:, i+1) = (M + (dt^2 / 4) * K) \ rhs;
+
     
     Times(i) = i * dt;
 end
