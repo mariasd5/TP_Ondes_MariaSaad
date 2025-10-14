@@ -11,12 +11,12 @@ Le travail couvre un problème stationnaire et un schéma temporel explicite (sa
 
 ## Contenu du dépôt
 
-TP_Ondes_MariaSaad/
-├─ src/                # scripts MATLAB (.m)
-├─ data/               # maillages Gmsh et données d’entrée
-├─ docs/               # rapport et énoncé du TP
-├─ README.md
-├─ .gitignore
+TP_Ondes_Maria_Saad/
+- src/                # scripts MATLAB (.m)
+- data/               # maillages Gmsh et données d’entrée
+- docs/               # rapport et énoncé du TP
+- README.md
+- .gitignore
 
 ## Méthodologie (résumé)
 
